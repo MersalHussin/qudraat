@@ -54,10 +54,11 @@ width: 120px;
   color: #272727;
   font-size: 1rem;
   transition: color 0.3s ease;
+  font-weight: bold;
 }
 
 .nav-list a:hover {
-  color: #f39c12;
+  color: var(--blue--color);
 }
 
 .menu-toggle {
@@ -91,7 +92,11 @@ width: 120px;
     width: 100%;
     transform: translateY(-100%);
     opacity: 0;
+    align-items: start;
+    padding:40px;
+    border-radius: 0 0 20px 20px;
   }
+
 
   .nav-list.active {
     transform: translateY(0);
@@ -103,7 +108,11 @@ width: 120px;
     margin: 1rem 0;
   }
 }
-
+@media( width <= 1020px){
+  .nav-list a{
+    color:white !important;
+  }
+}
 .contact-us{
   background-color: var(--green--color); ;
   padding: 10px 15px;
