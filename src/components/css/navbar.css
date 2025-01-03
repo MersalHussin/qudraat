@@ -5,11 +5,34 @@
   --yellow--color:#F2C900;
   --dark--color:#272727;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+  border-radius: 3px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue--color); 
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green--color); 
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none
+  text-decoration: none;
+  list-style: none;
   
 }
 
@@ -20,6 +43,9 @@ body {
   direction: rtl;
 }
 
+.nav-size{
+  height: 30px;
+}
 header.navbar {
   position: fixed !important;
   top: 0;
@@ -33,6 +59,12 @@ header.navbar {
   justify-content: space-between;
   align-items: center;
   padding: 20px 100px;
+}
+
+@media (width < 700px){
+  header.navbar {
+    padding: 20px 40px;
+  }
 }
 header.navbar img{
 width: 120px;
@@ -56,6 +88,30 @@ width: 120px;
   transition: color 0.3s ease;
   font-weight: bold;
 }
+.nav-list a.active {
+  color: var(--blue--color);
+  position: relative;
+}
+.nav-list a.active::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background-color: var(--blue--color);
+  position: absolute;
+  top: 49px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+@media (width < 700px){
+  .nav-list a.active::after {
+    background-color: white;
+    top: 35px;
+  }
+}
+
+
 
 .nav-list a:hover {
   color: var(--blue--color);
@@ -87,13 +143,13 @@ width: 120px;
     position: absolute;
     top: 80px;
     right: 0;
-    background-color: var(--blue--color);
+    background:linear-gradient(0deg , #052ED8,#031a79);
     flex-direction: column;
     width: 100%;
     transform: translateY(-100%);
     opacity: 0;
     align-items: start;
-    padding:40px;
+    padding:20px 40px;
     border-radius: 0 0 20px 20px;
   }
 
@@ -102,6 +158,7 @@ width: 120px;
     transform: translateY(0);
     opacity: 1;
   }
+  
 
   .nav-list li {
     text-align: center;
@@ -133,16 +190,6 @@ width: 120px;
 }
 
 
-/* Section Styling for Demo */
-main section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f4f4f4;
-  border-bottom: 1px solid #ddd;
-}
 
-main section:nth-child(even) {
-  background: #ddd;
-}
+
+

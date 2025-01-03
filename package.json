@@ -4,10 +4,12 @@
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
-    "locomotive-scroll": "^4.1.4",
+    "lenis": "^1.1.18",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1"
+    "react-router-dom": "^7.1.1",
+    "react-scripts": "5.0.1",
+    "swiper": "^11.1.15"
   },
   "scripts": {
     "start": "react-scripts start",
