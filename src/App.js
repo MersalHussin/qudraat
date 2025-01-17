@@ -11,6 +11,9 @@ const App = () => {
     
     <>
     {/* <ReactLenis root> */}
+    <a className="whatsapp-btn" target="_blank" href="https://wa.me/+201040031584?text=السلام%20عليكم%20كنت%20عاوز/ة%20أعرف%20تفاصيل">
+    <i className="fa-brands fa-whatsapp"></i>
+    </a>
       {/* Start Navbar */}
     <Navbar />
       {/* End Navbar */}

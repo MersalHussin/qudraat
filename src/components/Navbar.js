@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../components/css/navbar.css";
+import "./navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Navbar = () => {
     </div>
     <header className="navbar">
       <div className="logo">
-        <img src="/assets/Logo-txt.png" alt="sad" />
+        <img src="/assets/Logo-txt.png" alt="Ausrah-Logo" />
       </div>
       <div
         className={`menu-toggle ${menuOpen ? "active" : ""}`}
@@ -43,7 +43,7 @@ const Navbar = () => {
             className={activeLink === "#about-sec" ? "active" : ""}
             onClick={() => handleLinkClick("#about-sec")}
           >
-            عن قدرات
+            عن أُسرة
           </a>
         </li>
         <li>
@@ -52,7 +52,7 @@ const Navbar = () => {
             className={activeLink === "#video" ? "active" : ""}
             onClick={() => handleLinkClick("#video")}
           >
-            رحلة قدرات
+            أراء المستخدمين
           </a>
         </li>
         <li>
@@ -61,7 +61,7 @@ const Navbar = () => {
             className={activeLink === "#courses" ? "active" : ""}
             onClick={() => handleLinkClick("#courses")}
           >
-            الدورات
+            المدونة
           </a>
         </li>
         <li>
@@ -76,7 +76,7 @@ const Navbar = () => {
       </ul>
       <a
         className="contact-us"
-        href="#contact"
+        href="tel:+201040031584"
         onClick={() => handleLinkClick("#contact")}
       >
         تواصل معنا <i className="fa-solid fa-phone-volume"></i>

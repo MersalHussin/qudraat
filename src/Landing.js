@@ -26,14 +26,14 @@ const Landing = () => {
       details: "جلسة تفاعلية مع كوتش متخصص تساعدك على تحديد ميولك المهنية",
     },
     {
-      title: "تعلم المهارات",
+      title: "تنمية القدرات ",
       imageSrc: "/assets/skills.png",
       className: "second",
       details:
-        "بناءً على ميولك، نقدم لك تدريبًا على المهارات التي تحتاجها مثل البرمجة التصميم وغيرها",
+        "بناءً على ميولك، نقدم لك تدريبًا على المهارات التكنولوجيا التي تحتاجها مثل التصميم وغيرها",
     },
     {
-      title: "توظيف المهارات",
+      title: "توظيف القدرات",
       imageSrc: "/assets/growth.png",
       className: "third",
       details:
@@ -43,19 +43,19 @@ const Landing = () => {
 
   const courses = [
     {
-      title: "نينجا جين",
-      instructor: "د. محمود دويدار",
-      imageSrc: "/assets/C1.png",
+      title: "التعامل مع التكنولوجيا داخل الأسرة",
+      instructor: " كيف نحافظ على التوازن....",
+      imageSrc: "/assets/Blog1.jpg",
     },
     {
-      title: "اكتشاف الميول للأطفال",
-      instructor: "كوتش شيماء سعيد",
-      imageSrc: "/assets/C2.png",
+      title: "التعامل مع التكنولوجيا داخل الأسرة",
+      instructor: " كيف نحافظ على التوازن....",
+      imageSrc: "/assets/Blog1.jpg",
     },
     {
-      title: "اكتشف نفسك",
-      instructor: "د",
-      imageSrc: "/assets/video.png",
+      title: "التعامل مع التكنولوجيا داخل الأسرة",
+      instructor: " كيف نحافظ على التوازن....",
+      imageSrc: "/assets/Blog1.jpg",
     },
   ];
 
@@ -64,27 +64,22 @@ const Landing = () => {
   const videos = [
     {
       id: 1,
-      title: "فيديو 1",
-      thumbnail: "/assets/video.png",
-      videoSrc: "https://www.youtube.com/embed/lqN82bblk9Q?si=kniQMR1GJGZBeRBy",
+      title: "فيديو لمستخدم أسرة",
+      thumbnail: "/assets/Blog1.jpg",
+      videoSrc: "https://www.youtube.com/embed/-M4EvJRSmjg?si=c2UrK7YFWZQvU1mQ",
+
     },
     {
       id: 2,
-      title: "فيديو 2",
-      thumbnail: "/assets/C1.png",
-      videoSrc: "https://www.youtube.com/embed/lqN82bblk9Q?si=kniQMR1GJGZBeRBy",
+      title: "فيديو لمستخدم أسرة",
+      thumbnail: "/assets/Blog1.jpg",
+      videoSrc: "https://www.youtube.com/embed/OOujVJMOt7s?si=DFQhstC-tyXNzE3O",
     },
     {
       id: 3,
-      title: "فيديو 3",
-      thumbnail: "/assets/C2.png",
-      videoSrc: "https://www.youtube.com/embed/lqN82bblk9Q?si=kniQMR1GJGZBeRBy",
-    },
-    {
-      id: 4,
-      title: "فيديو 3",
-      thumbnail: "/assets/video.png",
-      videoSrc: "https://www.youtube.com/embed/lqN82bblk9Q?si=kniQMR1GJGZBeRBy",
+      title: "فيديو لمستخدم أسرة",
+      thumbnail: "/assets/Blog1.jpg",
+      videoSrc: "https://www.youtube.com/embed/u75iRPkR3Cw?si=No0sMMjVZy8O3xcL",
     },
   ];
 
@@ -104,98 +99,117 @@ const Landing = () => {
 
   const faqs = [
     {
-      question: "ما هي قدرات؟",
+      question: "ما هو تطبيق أسرة؟",
       answer:
-        "قدرات هي شركة تهدف إلى تمكين الشباب ليصبحوا رواد أعمال من خلال نظام ASK الذي يعتمد على اكتشاف الميول، تعلم المهارات، وتطبيق المعرفة.",
+        "تطبيق أسرة هو منصة تهدف إلى تمكين الشباب والأطفال من اكتشاف إمكانياتهم وتحقيق أهدافهم من خلال دعم الكوتشز وبرامج متخصصة.",
     },
     {
-      question: "لمن تقدم قدرات خدماتها؟",
-      answer: "قدرات تقدم خدماتها للأطفال والشباب من عمر 8 إلى 18 عامًا.",
+      question: "لمن يقدم تطبيق أسرة خدماته؟",
+      answer: "تطبيق أسرة يقدم خدماته للأطفال والشباب وأولياء الأمور لتطوير مهاراتهم وبناء شخصياتهم.",
     },
     {
-      question: "كيف يمكنني التسجيل؟",
+      question: "كيف يمكنني التسجيل في تطبيق أسرة؟",
       answer:
-        "يمكنك التسجيل بسهولة من خلال موقعنا الإلكتروني عبر الضغط على زر 'سجل الآن' واتباع الخطوات المطلوبة.",
+        "يمكنك التسجيل من خلال تحميل التطبيق على هاتفك الذكي وإنشاء حساب جديد باتباع الخطوات البسيطة.",
     },
     {
-      question: "ما هي المهارات التي يمكن تعلمها؟",
+      question: "ما هو دور الكوتشز في تطبيق أسرة؟",
       answer:
-        "من المهارات التي يمكن تعلمها البرمجة، التصميم، الروبوت، وإدارة المشاريع.",
+        "الكوتشز في تطبيق أسرة يقدمون التوجيه والدعم للأفراد، سواء كانوا أطفالًا أو أولياء أمور، لمساعدتهم على التعامل مع تحديات الحياة وتحقيق أهدافهم.",
     },
     {
-      question: "هل التدريب عبر الإنترنت أم حضوري؟",
+      question: "هل تطبيق أسرة مناسب لأولياء الأمور؟",
       answer:
-        "تقدم قدرات التدريب عبر الإنترنت مع توفير جلسات تفاعلية مباشرة مع المدربين.",
+        "نعم، يقدم تطبيق أسرة برامج مخصصة لأولياء الأمور لمساعدتهم على تحسين تواصلهم مع أطفالهم وتعزيز دورهم التربوي.",
     },
     {
-      question: "ما هي مدة الرحلة التعليمية؟",
+      question: "هل هناك جلسات فردية في تطبيق أسرة؟",
       answer:
-        "الرحلة التعليمية تختلف حسب البرنامج، لكنها عادةً تتراوح بين 3 إلى 6 أشهر.",
+        "نعم، يوفر تطبيق أسرة جلسات فردية مع الكوتشز لتقديم الدعم الشخصي بما يتناسب مع احتياجات المستخدم.",
     },
     {
-      question: "هل هناك شهادات معتمدة؟",
+      question: "ما هي مميزات تطبيق أسرة؟",
       answer:
-        "نعم، تقدم قدرات شهادات معتمدة عند إتمام البرامج التعليمية بنجاح.",
+        "من مميزات تطبيق أسرة: بيئة تفاعلية، دعم من كوتشز متخصصين، برامج مخصصة لكل فئة عمرية، وشهادات عند إتمام البرامج.",
     },
-  ];
+    {
+      question: "كيف يمكنني التواصل مع فريق الدعم؟",
+      answer:
+        "يمكنك التواصل مع فريق الدعم من خلال قسم 'اتصل بنا' داخل التطبيق أو عبر البريد الإلكتروني الخاص بخدمة العملاء.",
+    },
+];
 
   return (
     <>
       <main>
-        <section className="landing" id="landing">
-            <a href="about-sec" className="scroll-down">
-              <i className="fa-solid fa-angle-down"></i>
-            </a>
-          <div className="container">
-            <div className="landing-box-txt">
-              <h1 className="heading-landing">
-                {" "}
-                نبني اليوم رواد <span>تكنولوجيا </span>الغد
-              </h1>
-              <ul className="features">
-                <li>
-                  {" "}
-                  جلسات مع متخصصين <span>اكتشاف ميول طفلك المهنية</span>
-                </li>
-                <li>
-                  {" "}
-                  مناهج تعليمية متطورة تربط بين <span>الشغف وسوق العمل</span>
-                </li>
-                <li>
-                  {" "}
-                  التعرف على التسويق و إدارة المشاريع{" "}
-                  <span>لبناء رائد أعمال</span>
-                </li>
-              </ul>
-
-              <div className="btn-container">
-                <a className="btn explore" href="#about">
-                  أكتشف أكتر
-                </a>
-                <a className="btn chat" href="#about">
-                  تحدث معانا <i className="fa-solid fa-comments"></i>
-                </a>
-              </div>
+      <section class="hero-section">
+        <img src="/assets/Logo Pattern.svg" class="pattern-image" alt="pattern"/>
+        <div class="container">
+            <div class="data">
+  
+                <div class="text">
+                    <h1>أسرة أفــــضل,
+                        مجتمع أفضل</h1>
+                    <p>
+                        تطبيق لـ الإرشاد والدعم لبناء علاقات
+أسرية أقوى وأكثر وعيًا في المجتمع
+                    </p>
+                    <div class="links">
+                        <a href="#ios"><img src="/assets/IOS.png" alt="android-app"/></a>
+                        <a href="#andriod"><img src="/assets/Android.png" alt="android-app"/></a>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="/assets/Landing Section.webp" alt="Landing-image"/>
+                </div>
             </div>
-            <img src="/assets/Qudraat-Website.png" alt="image" />
+            <div>
+                <a href="#about">
+                    <img class="scroll-down-arrow" src="/assets/scroll-down.png" alt="scroll-down"/>
+                </a>
+            </div>
+        </div>
+    </section>
+        <section id="about-sec">
+          <div className="container">
+            <img src="/assets/Ausrah-mocukup.svg" style={{padding:"40px"}} alt="about" />
+            <div className="about-txt">
+              <h1 className="title">نبذة عن  أُسرة</h1>
+              <p className="about-data">
+              أسرة ليس مجرد تطبيق، بل هو منصة تفاعلية تهدف إلى تمكين الأهل  من اكتشاف إمكانياتهم، وبناء شخصياتهم من خلال دعم متكامل 
+              </p>
+              {/* <a href="#about">نزل الكتالوج</a> */}
+            </div>
           </div>
         </section>
         <section id="about-sec">
           <div className="container">
             <div className="about-txt">
-              <h1 className="title">عن قدرات</h1>
+              <h1 className="title">مدربك الشخصي بين يديك</h1>
               <p className="about-data">
-                قدرات تهدف إلى تمكين الشباب والأطفال ليصبحوا رواد أعمال
-                من خلال رحلة فريدة تبدأ باكتشاف شغفهم وتنتهي بتحقيق أحلامهم
+              مع تطبيق سرة، يصبح المدرب الشخصي جزءًا من حياتك اليومية. سواء كنت تسعى لتطوير مهاراتك أو التغلب على تحدياتك، فإن مدربي "أسرة" موجودون لدعمك خطوة بخطوة لتحقيق أفضل نسخة من نفسك.
               </p>
               {/* <a href="#about">نزل الكتالوج</a> */}
             </div>
-            <img src="/assets/Logo.png" alt="about" />
+            <img src="/assets/phone-image.svg" alt="about" />
+          </div>
+        </section>
+        <section id="about-sec">
+          <div className="container">
+            <img src="/assets/Family-image1.svg" alt="about" />
+            <div className="about-txt">
+              <h1 className="title">الأسرة هي أساس المجتمع</h1>
+              <p className="about-data">
+              نسعى من خلال تطبيق أسرة إلى تعزيز الترابط الأسري وبناء جيل واعٍ ومتماسك. نوفر بيئة تفاعلية تتيح للآباء والأمهات توجيه أطفالهم وتنمية مهاراتهم بطرق مبتكرة وشخصية.
+              </p>
+              {/* <a href="#about">نزل الكتالوج</a> */}
+            </div>
           </div>
         </section>
         <section id="video">
+          <h1 className="title">لماذا أسرة ؟</h1>
           <img
-            src="/assets/video.png"
+            src="/assets/Blog1.jpg"
             alt="video-img"
             onClick={openModal}
             style={{ cursor: "pointer" }}
@@ -211,8 +225,7 @@ const Landing = () => {
                 </button>
                 <iframe
                   width="100%"
-                  height="400"
-                  src="https://www.youtube.com/embed/UFMrRBpcPS4?si=QPw7-qkfCwks59cO"
+                  src="https://www.youtube.com/embed//xnq7Es2y15A?si=GbkGEeO3abVkMSiP"
                   title="Video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -222,44 +235,13 @@ const Landing = () => {
           )}
         </section>
 
-        <section id="journy">
-          <div className="container">
-            <div className="journy-txt">
-              <h1 className="title">رحلة قدرات</h1>
-              <p>
-                رحلتك مع <span>قدرات</span> تتكون من 3 مراحل مميزة
-              </p>
-            </div>
-            <div className="journies-container">
-              <div>
-                {discoverItems.map((journy, index) => (
-                  <div
-                    key={index}
-                    className={`journy-data ${journy.className}`}
-                  >
-                    <h2>{journy.title}</h2>
-                    <div className="image-journy-cont">
-                      <img
-                        src={journy.imageSrc}
-                        alt={`journy-icon-${journy.title}`}
-                      />
-                    </div>
-                    <p>{journy.details}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section id="CTA">
-          <h1>جاهز لاكتشاف قدراتك الحقيقية</h1>
-          <a href="#Tell">أبدا رحلتك الان</a>
-        </section>
+
+
 
         <section id="courses">
           <div className="container">
-            <h1 className="title">الدورات</h1>
+            <h1 className="title">المدونة</h1>
             <div className="courses-container">
               {courses.map((course, index) => (
                 <a key={index} href={`# ${course.title}`}>
@@ -271,20 +253,22 @@ const Landing = () => {
                 </a>
               ))}
             </div>
-            <a className="btn explore" href="#more">
+            <a className="btn explore"  href="https://wa.me/+201040031584?text=السلام عليكم كنت عاوز أعرف الكورسات اللي عندكم وتفاصيلها" target="_blank">
               {" "}
               أكتشف المزيد
             </a>
           </div>
         </section>
-
-        <section id="Certifcate">
-          <div className="container">
-            <img src="/assets/Qudraat Certifacte.png"></img>
+        
+        <section id="CTA">
+          <h1>كن واعي بـ أسرتك الان</h1>
+          <div className="links-CTA" style={{ display:"flex",gap:"30px"}}>
+          <a target="_blank" href="https://wa.me/+201040031584?text=السلام%20عليكم%20كنت%20عاوز/ة%20أعرف%20تفاصيل">نزل التطبيق IOS</a>
+          <a target="_blank" href="https://wa.me/+201040031584?text=السلام%20عليكم%20كنت%20عاوز/ة%20أعرف%20تفاصيل">نزل التطبيق  Andriod</a>
           </div>
         </section>
 
-        (
+        
     <section id="Feedback">
       {activeVideo && (
         <div className="video-overlay" onClick={closeVideo}>
@@ -304,7 +288,7 @@ const Landing = () => {
       )}
 
       <div className="reels-container">
-        <h1 className="title">اراء الأهالي</h1>
+        <h1 className="title">اراء المستخدمين</h1>
         <Swiper
           spaceBetween={20}
           slidesPerView={3}
@@ -370,16 +354,16 @@ const Landing = () => {
 
         <section className="contact">
           <div className="container">
-            <a href="#mail-to" className="email">
+            <a href="mailto:info@qudraat.com" className="email">
               <h2>راسلنا دلوقتي على</h2>
-              <h1>info.qudraat.com</h1>
+              <h1>info@ausrah.com</h1>
             </a>
-            <a href="#phone-to" className="phone">
+            <a href="tel:+201040031584" className="phone">
               <h2>اتصل بنا على </h2>
               <h1>01040031584</h1>
             </a>
             <div>
-              <a className="btn chat" href="#about">
+              <a className="btn chat" href="https://wa.me/+201040031584?text=السلام%20عليكم%20كنت%20عاوز/ة%20أعرف%20تفاصيل">
                 تحدث معانا <i className="fa-solid fa-comments"></i>
               </a>
             </div>
@@ -389,30 +373,30 @@ const Landing = () => {
         <footer id="footer">
           <div className="logo-footer">
             <img
-              src="/assets/Qudraat White.png"
+              src="/assets/Ausrah-Footer.svg"
               alt="logo-footer"
               className="logo-qudraat"
             />
-          </div>
-          <div className="social-media">
-            <a href="#">
-              <img src="/assets/Youtube.svg" alt="Youtube" />
-            </a>
-            <a href="#">
-              <img src="/assets/Tiktok.svg" alt="Tiktok" />
-            </a>
-            <a href="#">
-              <img src="/assets/Facebook.svg" alt="Facebook" />
-            </a>
-            <a href="#">
-              <img src="/assets/Insta.svg" alt="Insta" />
-            </a>
-            <a href="#">
-              <img src="/assets/Whatsapp.svg" alt="Whatsapp" />
-            </a>
-          </div>
-          <div className="line"></div>
-          <div className="copyright">جميع الحقوق محفوظة لـ قدرات © 2025</div>
+            </div>
+            <div className="social-media">
+              <a href="https://www.youtube.com/channel/UCQFUhLEiFUjj2JXPSt_45dA">
+                <img src="/assets/Youtube.svg" alt="Youtube" />
+              </a>
+              <a href="https://www.tiktok.com/@qudraat?is_from_webapp=1&sender_device=pc">
+                <img src="/assets/Tiktok.svg" alt="Tiktok" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61571035216683&mibextid=ZbWKwL">
+                <img src="/assets/Facebook.svg" alt="Facebook" />
+              </a>
+              <a href="">
+                <img src="/assets/Insta.svg" alt="Insta" />
+              </a>
+              <a href="https://wa.me/+201040031584">
+                <img src="/assets/Whatsapp.svg" alt="Whatsapp" />
+              </a>
+            </div>
+            <div className="line"></div>
+            <div className="copyright">جميع الحقوق محفوظة لـ أسرة © 2025</div>
         </footer>
       </main>
     </>
