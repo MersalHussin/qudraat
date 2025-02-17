@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // استيراد أنماط المكتبة
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
+import Footer from "./components/Footer";
 
 
 
@@ -18,44 +20,24 @@ const Landing = () => {
     setIsModalOpen(false);
   };
 
-  const discoverItems = [
-    {
-      title: "اكتشاف القدرات",
-      imageSrc: "/assets/explore.png",
-      className: "frist",
-      details: "جلسة تفاعلية مع كوتش متخصص تساعدك على تحديد ميولك المهنية",
-    },
-    {
-      title: "تنمية القدرات ",
-      imageSrc: "/assets/skills.png",
-      className: "second",
-      details:
-        "بناءً على ميولك، نقدم لك تدريبًا على المهارات التكنولوجيا التي تحتاجها مثل التصميم وغيرها",
-    },
-    {
-      title: "توظيف القدرات",
-      imageSrc: "/assets/growth.png",
-      className: "third",
-      details:
-        "تعلم كيف توظف ما تعلمته لتبدأ أولى الخطوات في عالم ريادة الأعمال",
-    },
-  ];
+
 
   const courses = [
     {
       title: "التعامل مع التكنولوجيا داخل الأسرة",
-      instructor: " كيف نحافظ على التوازن....",
+      // subject: " كيف نحافظ على التوازن هذا النص افتراضي هذا النص افتراضي هذا النص افتراضي...",
       imageSrc: "/assets/Blog1.jpg",
     },
     {
-      title: "التعامل مع التكنولوجيا داخل الأسرة",
-      instructor: " كيف نحافظ على التوازن....",
-      imageSrc: "/assets/Blog1.jpg",
+      title: "التعامل مع تحديات الأطفال في مراحل عمرية مختلفة",
+      // subject: " كيف نحافظ على التوازن هذا النص افتراضي هذا النص افتراضي هذا النص افتراضي...",
+      imageSrc: "/assets/Blog2.jpg",
     },
     {
-      title: "التعامل مع التكنولوجيا داخل الأسرة",
-      instructor: " كيف نحافظ على التوازن....",
-      imageSrc: "/assets/Blog1.jpg",
+      title: "كيف نبني علاقة قوية مع أطفالنا؟",
+      // subject: "  ...",
+      imageSrc: "/assets/Blog3.jpg",
+      
     },
   ];
 
@@ -77,6 +59,12 @@ const Landing = () => {
     },
     {
       id: 3,
+      title: "فيديو لمستخدم أسرة",
+      thumbnail: "/assets/Blog1.jpg",
+      videoSrc: "https://www.youtube.com/embed/u75iRPkR3Cw?si=No0sMMjVZy8O3xcL",
+    },
+    {
+      id: 4,
       title: "فيديو لمستخدم أسرة",
       thumbnail: "/assets/Blog1.jpg",
       videoSrc: "https://www.youtube.com/embed/u75iRPkR3Cw?si=No0sMMjVZy8O3xcL",
@@ -142,36 +130,36 @@ const Landing = () => {
   return (
     <>
       <main>
-      <section class="hero-section">
-        <img src="/assets/Logo Pattern.svg" class="pattern-image" alt="pattern"/>
-        <div class="container">
-            <div class="data">
+      <section className="hero-section">
+        <img src="/assets/Logo Pattern.svg" className="pattern-image" alt="pattern"/>
+        <div className="container">
+            <div className="data">
   
-                <div class="text">
+                <div className="text">
                     <h1>أسرة أفــــضل,
                         مجتمع أفضل</h1>
                     <p>
                         تطبيق لـ الإرشاد والدعم لبناء علاقات
 أسرية أقوى وأكثر وعيًا في المجتمع
                     </p>
-                    <div class="links">
+                    <div className="links">
                         <a href="#ios"><img src="/assets/IOS.png" alt="android-app"/></a>
                         <a href="#andriod"><img src="/assets/Android.png" alt="android-app"/></a>
                     </div>
                 </div>
-                <div class="image">
+                <div className="image">
                     <img src="/assets/Landing Section.webp" alt="Landing-image"/>
                 </div>
             </div>
             <div>
-                <a href="#about">
-                    <img class="scroll-down-arrow" src="/assets/scroll-down.png" alt="scroll-down"/>
+                <a href="#about-sec">
+                    <img className="scroll-down-arrow" src="/assets/scroll-down.png" alt="scroll-down"/>
                 </a>
             </div>
         </div>
     </section>
         <section id="about-sec">
-          <div className="container">
+          <div className="container coulmn">
             <img src="/assets/Ausrah-mocukup.svg" style={{padding:"40px"}} alt="about" />
             <div className="about-txt">
               <h1 className="title">نبذة عن  أُسرة</h1>
@@ -185,20 +173,20 @@ const Landing = () => {
         <section id="about-sec">
           <div className="container">
             <div className="about-txt">
-              <h1 className="title">مدربك الشخصي بين يديك</h1>
+              <h1 className="title">مدربك بين يديك</h1>
               <p className="about-data">
               مع تطبيق سرة، يصبح المدرب الشخصي جزءًا من حياتك اليومية. سواء كنت تسعى لتطوير مهاراتك أو التغلب على تحدياتك، فإن مدربي "أسرة" موجودون لدعمك خطوة بخطوة لتحقيق أفضل نسخة من نفسك.
               </p>
               {/* <a href="#about">نزل الكتالوج</a> */}
             </div>
-            <img src="/assets/phone-image.svg" alt="about" />
+            <img src="/assets/Phone-image.svg" alt="about" />
           </div>
         </section>
         <section id="about-sec">
-          <div className="container">
+          <div className="container coulmn">
             <img src="/assets/Family-image1.svg" alt="about" />
             <div className="about-txt">
-              <h1 className="title">الأسرة هي أساس المجتمع</h1>
+              <h1 className="title">الأسرة هي الأساس </h1>
               <p className="about-data">
               نسعى من خلال تطبيق أسرة إلى تعزيز الترابط الأسري وبناء جيل واعٍ ومتماسك. نوفر بيئة تفاعلية تتيح للآباء والأمهات توجيه أطفالهم وتنمية مهاراتهم بطرق مبتكرة وشخصية.
               </p>
@@ -208,8 +196,8 @@ const Landing = () => {
         </section>
         <section id="video">
           <h1 className="title">لماذا أسرة ؟</h1>
-          <img
-            src="/assets/Blog1.jpg"
+                    <img
+            src="/assets/why-ausrah.jpg"
             alt="video-img"
             onClick={openModal}
             style={{ cursor: "pointer" }}
@@ -225,7 +213,7 @@ const Landing = () => {
                 </button>
                 <iframe
                   width="100%"
-                  src="https://www.youtube.com/embed//xnq7Es2y15A?si=GbkGEeO3abVkMSiP"
+                  src="https://www.youtube.com/embed/QXoxGrqWyeg?si=b5bViH2znXNrZ-lW"
                   title="Video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -235,32 +223,27 @@ const Landing = () => {
           )}
         </section>
 
-
-
-
-
         <section id="courses">
           <div className="container">
             <h1 className="title">المدونة</h1>
             <div className="courses-container">
               {courses.map((course, index) => (
-                <a key={index} href={`# ${course.title}`}>
+                <Link key={index} to={`/blog${index+1}`}>
                   <div className="course-box">
                     <img src={course.imageSrc} alt={course.title} />
                     <h1>{course.title}</h1>
-                    <p>{course.instructor}</p>
+                    <p>{course.subject}</p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
-            <a className="btn explore"  href="https://wa.me/+201040031584?text=السلام عليكم كنت عاوز أعرف الكورسات اللي عندكم وتفاصيلها" target="_blank">
-              {" "}
+            <a className="btn explore"  href="#" >
               أكتشف المزيد
             </a>
           </div>
         </section>
         
-        <section id="CTA">
+        <section className="CTA">
           <h1>كن واعي بـ أسرتك الان</h1>
           <div className="links-CTA" style={{ display:"flex",gap:"30px"}}>
           <a target="_blank" href="https://wa.me/+201040031584?text=السلام%20عليكم%20كنت%20عاوز/ة%20أعرف%20تفاصيل">نزل التطبيق IOS</a>
@@ -318,6 +301,13 @@ const Landing = () => {
         </Swiper>
       </div>
     </section>  
+
+    <section className="CTA library">
+          <h1>مكتبة تساعدك في توعية أُسرتك</h1>
+          <div className="links-CTA" style={{ display:"flex",gap:"30px"}}>
+          <Link to="library">أكتشف المكتبة الان</Link>          </div>
+        </section>
+
         <section id="FAQ">
           <div className="container">
             <h1 className="title">الأسئلة الشائعة</h1>
@@ -354,7 +344,7 @@ const Landing = () => {
 
         <section className="contact">
           <div className="container">
-            <a href="mailto:info@qudraat.com" className="email">
+            <a href="mailto:info@ausrah.com" className="email">
               <h2>راسلنا دلوقتي على</h2>
               <h1>info@ausrah.com</h1>
             </a>
@@ -370,34 +360,7 @@ const Landing = () => {
           </div>
         </section>
 
-        <footer id="footer">
-          <div className="logo-footer">
-            <img
-              src="/assets/Ausrah-Footer.svg"
-              alt="logo-footer"
-              className="logo-qudraat"
-            />
-            </div>
-            <div className="social-media">
-              <a href="https://www.youtube.com/channel/UCQFUhLEiFUjj2JXPSt_45dA">
-                <img src="/assets/Youtube.svg" alt="Youtube" />
-              </a>
-              <a href="https://www.tiktok.com/@qudraat?is_from_webapp=1&sender_device=pc">
-                <img src="/assets/Tiktok.svg" alt="Tiktok" />
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=61571035216683&mibextid=ZbWKwL">
-                <img src="/assets/Facebook.svg" alt="Facebook" />
-              </a>
-              <a href="">
-                <img src="/assets/Insta.svg" alt="Insta" />
-              </a>
-              <a href="https://wa.me/+201040031584">
-                <img src="/assets/Whatsapp.svg" alt="Whatsapp" />
-              </a>
-            </div>
-            <div className="line"></div>
-            <div className="copyright">جميع الحقوق محفوظة لـ أسرة © 2025</div>
-        </footer>
+<Footer/>
       </main>
     </>
   );

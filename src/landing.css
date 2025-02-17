@@ -1,3 +1,4 @@
+
 :root{
   --main--color: #008896;
   --pink--color: #ec5d80;
@@ -7,7 +8,7 @@
 
 *{
   scroll-behavior: smooth;
-  font-family: 'Somar Sans';
+  font-family: "Alexandria", serif;
   font-style: normal;         
 }
 section {
@@ -57,7 +58,7 @@ header {
   font-size: 30px;
   padding: 20px;
   border-radius: 50%;
-  background-color: var(--pink--color);
+  background-color: var(--main--color);
   z-index: 999;
   width: 50px;
   height: 50px;
@@ -68,9 +69,9 @@ header {
   transition: 0.3s;
 }
 .whatsapp-btn:hover i{
-  color: var(--pink--color);
+  color: var(--main--color);
   background-color: white;
-  border: 2px solid var(--pink--color);
+  border: 2px solid var(--main--color);
 
 }
 .title{
@@ -187,7 +188,7 @@ border-radius: 50%;
   right: 100px;
   top: 20px;
 }
-@media ( 1400px < width  ){
+@media ( 1600px < width  ){
   .hero-section .data .image img{
     max-width: 900px !important;
   }
@@ -203,16 +204,20 @@ border-radius: 50%;
   top: -50px;
 }
 .hero-section .container .text h1{
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   color: #008896;
+  line-height: 1.8;
   text-align: right;
 }
 .hero-section .container .text p{
   font-size: 22px;
+  font-weight: 300;
   color: #3f3f3f;
   width: fit-content;
   text-align: right;
+  line-height: 1.8;
+
 }
 
 .hero-section .container .data .links {
@@ -250,10 +255,10 @@ border-radius: 50%;
       text-align: center !important;
   }
   .hero-section .container h1{
-      font-size: 50px !important;
+      font-size: 42px !important;
   }
   .hero-section .container p{
-      font-size: 20px !important;
+      font-size: 19px !important;
   }
   .hero-section .container .text{
       width: 330px;
@@ -271,6 +276,8 @@ border-radius: 50%;
   gap: 30px;
 }
 
+
+
 #about-sec img {
   width: 600px;
 }
@@ -283,6 +290,10 @@ border-radius: 50%;
   color: #333;
 }
 
+#about-sec p{
+  font-size: 20px;
+  font-weight: 400;
+}
 @media (  width < 1020px ){
   #about-sec .container{
     flex-direction: column-reverse;
@@ -290,6 +301,7 @@ border-radius: 50%;
   }
   #about-sec p{
     font-size: 20px;
+    font-weight: 300;
   }
 }
 
@@ -300,7 +312,23 @@ border-radius: 50%;
 }
 @media (  width < 550px ){
   #about-sec .container{
-    padding: 20px;
+    padding: 24px;
+  }
+  .title{
+    font-size: 30px;
+  }
+
+  #about-sec .container img{
+    width: 300px !important;
+  }
+  
+}
+@media (  width < 1080px ){
+  #about-sec .container.coulmn{
+    flex-direction: column !important;
+  }
+  #about-sec .container img{
+    width: 400px;
   }
 }
 /* End -- About Page -- */
@@ -328,6 +356,7 @@ background-attachment:fixed;
   z-index: -1;
   opacity: 0.7;
 }
+
 #video h1 {
   font-size: 40px;
   color: white;
@@ -547,7 +576,7 @@ width: 50px;
 
 
 /* Start -- CTA-Section -- */
-#CTA{
+.CTA{
 background: linear-gradient(270deg,#ec5d80,#ec5d80);
 height:50vh;
 display: flex;
@@ -557,25 +586,34 @@ flex-direction: column;
 gap: 30px;
 position: relative;
 z-index: 9;
+padding: 30px;
 }
-#CTA::after{
-content:"";
-background: url('/public/assets/Ausrah-pink.svg');
-background-position: center;
-background-size: cover;
+.CTA.library{
+background: linear-gradient(270deg,#008896,#175a96);
+height:50vh;
+}
+.CTA::after{
+  content:"";
+  background: url('/public/assets/Ausrah-pink.svg');
+  background-position: center;
+  background-size: cover;
 height: 50vh;
-width: 50%;
+width: 100%;
 position: absolute;
 z-index: -1;
 opacity: .1;
 }
-#CTA h1{
+.CTA.library::after{
+  background: url('/public/assets/Ausrah-pink.svg');
+  opacity: .05;
+}
+.CTA h1{
 color: white;
 text-align: center;
 font-size: 50px;
-padding: 20px;
+padding: 30px 0 0 0;
 }
-#CTA a{
+.CTA a{
 background-color: white;
 color: var(--pink--color);
 border-radius: 5px;
@@ -586,113 +624,35 @@ padding: 15px 20px;
 transition: 0.3s;
 border: 2px solid transparent;
 }
-#CTA a:hover{
+.CTA a:hover{
 background-color: var(--pink--color);
 color: white;
 border-color: white;
 border-radius: 7px;
 }
-
+.CTA.library a{
+  background-color: white;
+  color: var(--main--color);
+}
+.CTA.library a:hover{
+  background-color: var(--main--color--color);
+  color: white;
+}
 @media (  width < 550px ){
-  #CTA h1{
-    font-size: 40px;
+  .CTA h1{
+    font-size: 30px;
+  }
+}
+@media (  width < 550px ){
+  .CTA .links-CTA{
+    flex-direction: column;
+    padding-bottom: 30px;
   }
 }
 /* End -- CTA-Section -- */
 
 
-/* Start-- Courses-Section -- */
-#courses{
-  max-height: 100vh;;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: 1;
-  padding:50px;
-}
-#courses .container{
-  flex-direction: column;
-  gap: 30px;
-  flex-wrap: wrap;
-}
 
-.courses-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.course-box img{
-  width: 100%;
-  /* border-radius: 5px 5px 0 0; */
-  position: relative;
-  z-index: -1;
-  transition: 0.3s;
-  margin-bottom: 5px;
-  scale: 1.01;
-}
-.course-box:hover img{
-  transform: scale(1.05) rotate(1deg);
-  filter: blur(1px);
-}
-.course-box:hover h1{
-  color: var(--pink--color);
-}
-.course-box{
-  width: 406px;
-  height: 100%;
-  border: 3px solid var(--main--color);
-  border-radius: 10px;
-  text-align: center;
-  overflow: hidden;
-}
-.course-box h1{
-  color: var(--main--color);
-  font-weight: bold;
-  transition: 0.3s;
-}
-.course-box p{
-  color: var(--dark--color);
-  font-weight: 500;
-}
-/* End-- Courses-Section -- */
-
-
-/* Start -- Certifcate-Section -- */
-#Certifcate{
-height: 100vh;
-  background: url('/public/assets/CBackground.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-position: center;
-}
-#Certifcate img{
-  max-width: 900px;
-}
-
-@media (  width < 1020px ){
-  #Certifcate img{
-    width: 600px;
-  }
-}
-
-@media (width < 700px){
-  #Certifcate img{
-    width: 460px;
-  }
-}
-
-@media (  width < 550px ){
-  #Certifcate img{
-    width: 320px;
-  }
-}
-
-/* End -- Certifcate-Section -- */
 
 
 /* Start -- FAQ-Section -- */
@@ -722,7 +682,7 @@ height: 100vh;
 
 .faq-question {
   padding: 15px 20px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   color: #333;
   cursor: pointer;
@@ -737,6 +697,7 @@ height: 100vh;
 
 .icon {
   font-size: 16px;
+  padding: 0 20px 0 0 ;
   color: var(--main--color);
 }
 
@@ -750,7 +711,7 @@ height: 100vh;
 
 @media (  width < 1020px ){
   #FAQ .FAQ-box{
-    width: 700px;
+    width: 650px;
   }
 }
 
@@ -764,7 +725,7 @@ height: 100vh;
     width: 320px;
   }
   #FAQ .faq-question{
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -814,6 +775,7 @@ width: 100%;
   }
   .contact .container{
     flex-wrap: wrap;
+    font-size: 13px;
   }
 }
 @media (width < 600px){
@@ -981,3 +943,30 @@ footer .copyright{
 /* End Footer */
 
 
+
+
+
+
+/* Back button  */
+.back-button{
+  position: fixed;
+  top: 130px;
+  left: 50px;
+  color: var(--dark--color);
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+}
+.back-button i{
+margin: 5px;
+}
+
+@media (  width < 900px ){
+  .back-button{
+    font-size: 10px;
+    left: 20px;
+    top: 100px;
+  }
+}
+
+/* Back button  */

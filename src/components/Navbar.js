@@ -1,88 +1,96 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("#"); // حالة لتخزين الرابط النشط
+  const [activeSection, setActiveSection] = useState("#"); // تخزين السيكشن النشط
 
-  const handleLinkClick = (link) => {
-    setActiveLink(link); // تعيين الرابط النشط
-    setMenuOpen(false); // غلق المينو عند الضغط على أي رابط
-  };
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.6 } // تحديد متى يعتبر السيكشن ظاهرًا (60% منه على الأقل)
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
 
   return (
     <>
-    <div className="nav-size">
-
-    </div>
-    <header className="navbar">
-      <div className="logo">
-        <img src="/assets/Logo-txt.png" alt="Ausrah-Logo" />
-      </div>
-      <div
-        className={`menu-toggle ${menuOpen ? "active" : ""}`}
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div>
-      <ul className={`nav-list ${menuOpen ? "active" : ""}`}>
-        <li>
-          <a
-            href="#"
-            className={activeLink === "#" ? "active" : ""}
-            onClick={() => handleLinkClick("#")}
-          >
-            الرئيسية
-          </a>
-        </li>
-        <li>
-          <a
-            href="#about-sec"
-            className={activeLink === "#about-sec" ? "active" : ""}
-            onClick={() => handleLinkClick("#about-sec")}
-          >
-            عن أُسرة
-          </a>
-        </li>
-        <li>
-          <a
-            href="#video"
-            className={activeLink === "#video" ? "active" : ""}
-            onClick={() => handleLinkClick("#video")}
-          >
-            أراء المستخدمين
-          </a>
-        </li>
-        <li>
-          <a
-            href="#courses"
-            className={activeLink === "#courses" ? "active" : ""}
-            onClick={() => handleLinkClick("#courses")}
-          >
-            المدونة
-          </a>
-        </li>
-        <li>
-          <a
-            href="#FAQ"
-            className={activeLink === "#FAQ" ? "active" : ""}
-            onClick={() => handleLinkClick("#FAQ")}
-          >
-            الأسئلة الشائعة
-          </a>
-        </li>
-      </ul>
-      <a
-        className="contact-us"
-        href="tel:+201040031584"
-        onClick={() => handleLinkClick("#contact")}
-      >
-        تواصل معنا <i className="fa-solid fa-phone-volume"></i>
-      </a>
-    </header>
-        </>
+      <div className="nav-size"></div>
+      <header className="navbar">
+        <Link to="/" className="logo">
+          <img src="/assets/Logo-txt.png" alt="Ausrah-Logo" />
+        </Link>
+        <div
+          className={`menu-toggle ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+        <ul className={`nav-list ${menuOpen ? "active" : ""}`}>
+          <li>
+            <a
+              href="#"
+              className={activeSection === "#" ? "active" : ""}
+            >
+              الرئيسية
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about-sec"
+              className={activeSection === "#about-sec" ? "active" : ""}
+            >
+              عن أُسرة
+            </a>
+          </li>
+          <li>
+            <a
+              href="#courses"
+              className={activeSection === "#courses" ? "active" : ""}
+            >
+              المدونة
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Feedback"
+              className={activeSection === "#Feedback" ? "active" : ""}
+            >
+              أراء المستخدمين
+            </a>
+          </li>
+          <li>
+            <a
+              href="#FAQ"
+              className={activeSection === "#FAQ" ? "active" : ""}
+            >
+              الأسئلة الشائعة
+            </a>
+          </li>
+        </ul>
+        <a
+          className="contact-us"
+          href="tel:+201040031584"
+        >
+          تواصل معنا <i className="fa-solid fa-phone-volume"></i>
+        </a>
+      </header>
+    </>
   );
 };
 
